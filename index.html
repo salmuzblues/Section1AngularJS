@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<!-- Define Html as an angular application with the ng-app directive-->
+<html ng-app>
+<head>
+    <title>Hello, Angular</title>
+    <!--Load the Angular framework from a Content Delivery Network. -->
+    <script src="https://code.angularjs.org/1.5.8/angular.min.js"></script>
+</head>
+<!-- Initialize  the name variable using ng-init
+   Note that ng-init should be used for demonstrative and testing purposes only. When building an actual application,
+controllers should initialize the data.-->
+<body ng-init="name='World'">
+<label>Name</label>
+<!--Bind data from the model to the view on HTML controls. Bind an <input> to the name property-->
+<input ng-model="name"/>
+<!--Display the content from the model using double braces {{}} -->
+<span>Hello, {{ name }}!</span>
+<!--Another way of binding the name property is using ng-bind instead of handlebars {{}} -->
+<p ng-bind="name"></p>
+</body>
+</html>
